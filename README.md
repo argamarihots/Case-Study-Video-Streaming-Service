@@ -31,3 +31,10 @@ Data will be use in this case is user data that containing:
 1. Existed User (Shandy)
 - Check current plan and all pacflix plan benefit
   ![image](https://github.com/user-attachments/assets/df5a0200-918a-491a-a0db-d70a66ee550a)
+- User decide to upgrade plan to standard plan get discount 5%
+  ![image](https://github.com/user-attachments/assets/b61b80aa-cf14-439a-8e93-4248b1a4b6ac)
+2. New User (Faizal)
+- Check New User Benefit Plan
+
+
+
