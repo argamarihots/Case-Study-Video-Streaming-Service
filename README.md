@@ -35,6 +35,13 @@ Data will be use in this case is user data that containing:
   ![image](https://github.com/user-attachments/assets/b61b80aa-cf14-439a-8e93-4248b1a4b6ac)
 2. New User (Faizal)
 - Check New User Benefit Plan
+  ![image](https://github.com/user-attachments/assets/63774ec2-394b-4999-8658-3bfbffe7253a)
+- New user pick plan : Basic plan with case referral code, no referral code, and invalid code
+  ![image](https://github.com/user-attachments/assets/351576a1-d3b9-428b-8b91-e40aa7590bcb)
+  ![image](https://github.com/user-attachments/assets/0a263c2d-a3ab-4987-95dd-ee94072211b8)
+
+
+
 
 
 
