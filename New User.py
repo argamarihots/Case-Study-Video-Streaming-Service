@@ -9,7 +9,6 @@ data = {
     "Bagus": ["Basic Plan", 11, "bagus-9f92"]
 }
 
-#Create New User Class
 class NewUser:
     def __init__(self, username):
         self.username = username
@@ -17,6 +16,24 @@ class NewUser:
         self.duration_plan = None 
         self.referal_code = None
         self.referal_code_list = []
+        
+    def check_benefit(self):  # indentasi diperbaiki
+        #init column names
+        headers = ["Basic plan", "Standard Plan", "Premium Plan", "Benefit"]
+        # init data
+        tables = [
+                 ['✓', '✓', '✓', "Bisa Stream"],
+                 ['✓', '✓', '✓', "Bisa Download"],
+                 ['✓', '✓', '✓', "Kualitas SD"],
+                 ['✗', '✓', '✓', "Kualitas HD"],
+                 ['✗', '✗', '✓', "Kualitas UHD"],
+                 [1, 2, 4, "Number of Devices"],
+                 ["3rd party Movie only", "Basic Plan Content + Sports", "Basic Plan + Standard Plan + PacFlix Original Series", "Jenis Konten"],
+                 [120_000, 160_000, 200_000, "Harga"]]
+        print("====Pacflix Plan List===")
+        print("")
+        print(tabulate(tables, headers, tablefmt = "rst"))
+
     #method to generate referral code based on data
     def generate_referal_code(self, data):
         # iterate date
@@ -46,7 +63,7 @@ class NewUser:
             else:
                 raise Exception("Plan Tidak Tersedia!")
         #not input referal code get normal price
-        elif (referal_code == "") or (referal_code == ""):
+        elif referal_code == "":  # Diperbaiki, hanya 1 pengecekan kosong yang dibutuhkan
             if new_plan == "Basic Plan":
                 total_price = 120_000
                 return total_price
@@ -72,3 +89,17 @@ faizal.generate_referal_code(data = data)
 
 #test case new user with referal code
 faizal.pick_plan("Basic Plan", "shandy-2134")
+
+#All Test
+print("New User: Faizal") 
+print("\n") 
+faizal.check_benefit()
+print("\n") 
+calculate_with_referral_code = faizal.pick_plan("Basic Plan", "shandy-2134")
+calculate_withno_referral_code = faizal.pick_plan("Basic Plan", "")
+
+print(f"Total price with referral code: {calculate_with_referral_code}")
+print(f"Total price with no referral code: {calculate_withno_referral_code}")
+
+calculate_withInvalid_referral_code = faizal.pick_plan("Basic Plan", "invalid-code")
+print(f"Total price with invalid referral code: {calculate_withInvalid_referral_code}")

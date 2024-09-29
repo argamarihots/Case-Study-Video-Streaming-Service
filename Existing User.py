@@ -32,7 +32,7 @@ class User:
                  [120_000, 160_000, 200_000, "Harga"]]
         print("====Pacflix Plan List===")
         print("")
-        print(tabulate(tables, headers, tablefmt = "simple"))
+        print(tabulate(tables, headers, tablefmt = "rst"))
     # method to check current plan based on username
     def check_plan(self):
     #iterte keys and value based on data
@@ -42,6 +42,7 @@ class User:
             #create variable to store the values
                 self.current_plan, self.duration_plan, referal_code = values
                 
+                print("====Pacflix User Summary===")
                 print(f"Username: {self.username}")
                 print(f"Current Plan = {self.current_plan}")
                 print(f"Duration_plan = {self.duration_plan}")
@@ -97,3 +98,11 @@ user_1.check_benefit()
 #Test if user upgrade Plan
 calculate_shandy_plan = user_1.upgrade_plan(upgrade_plan = "Standard Plan")
 print(f"Plan baru yang Shandy harus bayar {calculate_shandy_plan}")
+
+#All Test
+user_1.check_plan()
+print("\n") 
+user_1.check_benefit()
+print("\n") 
+calculate_shandy_plan = user_1.upgrade_plan(upgrade_plan = "Standard Plan")
+print(f"Plan baru yang Shandy harus bayar setelah diskon 5% adalah {calculate_shandy_plan}")
